@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Information</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Home</h1>
+        <button id="refresh-button" title="Refresh">
+          <img src="refresh-icon.png" alt="Refresh" />
+        </button>
+      </header>
+
+      <label for="year">Year:</label>
+      <select id="year">
+        <option value="">Select Year</option>
+        <script>
+          for (let year = 2025; year >= 1990; year--) {
+            document.write(`<option value="${year}">${year}</option>`);
+          }
+        </script>
+      </select>
+
+      <div id="make-section" class="hidden">
+        <label for="make">Make:</label>
+        <select id="make">
+          <option value="">Select Make</option>
+          <option value="Nissan">Nissan</option>
+          <option value="Toyota">Toyota</option>
+          <option value="Honda">Honda</option>
+          <option value="Ford">Ford</option>
+          <option value="Chevrolet">Chevrolet</option>
+        </select>
+      </div>
+
+      <div id="model-section" class="hidden">
+        <label for="model">Model:</label>
+        <select id="model">
+          <option value="">Select Model</option>
+        </select>
+      </div>
+
+      <div id="trim-section" class="hidden">
+        <label for="trim">Trim:</label>
+        <select id="trim">
+          <option value="">Select Trim</option>
+        </select>
+      </div>
+
+      <!-- Car Details Section -->
+      <div id="result">
+        <strong>Result:</strong>
+        <div id="car-info"></div>
+      </div>
+      
+      <!-- Engine Details Section -->
+      <div id="engine-result">
+        <strong>Engine:</strong>
+        <div id="engine-info"></div>
+      </div>
+
+      <!-- Mileage Details Section -->
+      <div id="mileage-result">
+        <strong>Mileage:</strong>
+        <div id="mileage-info"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
